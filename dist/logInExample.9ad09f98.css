@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120.39deg, #a9abfb 11.61%, #BA84A2 114.96%), #7E1AFC no-repeat;
+    width: 1364px;
+    height: 657px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.signinWrapper {
+    width: 420px;
+    height: 384px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left: 475px;
+    background:  #FFFFFF;
+    box-shadow: 0px 4px 47px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+}
+
+h1 {
+    width: 220px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27.8578px;
+    font-family: montserrat;
+    color: #000000;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+span {
+    position: absolute;
+    top: 108px;
+    left: 43px;
+    box-sizing: border-box;
+    color:  #8B8787;
+    font-family: roboto;
+}
+form {
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+
+.username, .password , .submit{
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
+    border-radius: 3px;
+    border: 1px solid #BCBFC6;
+    width: 340px;
+    height: 45px;
+    margin-bottom: 15px;
+    padding-left: 20px; 
+}
+
+.submit {
+    background: #296DE8;
+    border: 1px solid #296DE8;
+    color: #FFFFFF;
+    padding: 0;
+    text-align: center;
+}
+
+/*# sourceMappingURL=/logInExample.9ad09f98.css.map */
