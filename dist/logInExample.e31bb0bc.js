@@ -149,6 +149,14 @@ form.addEventListener('submit', function (event) {
     var token = data.token;
     console.log(token);
   });
+
+  function checkLogin(data) {
+    var html = '';
+
+    if (usernameInput === '' || passwordInput === '') {
+      body.innerHTML += "<div class=\"error\">The username and password you entered did not match our records. Please double-check and try again.</div>";
+    }
+  }
 });
 },{}],"../../Users/leyda/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -178,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58209" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

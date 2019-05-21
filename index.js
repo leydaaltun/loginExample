@@ -35,9 +35,12 @@ form.addEventListener('submit', function (event) {
             console.log(token)
         })
 
-    // function checkLogin(data) {
-    //     if()
-    // }
+    function checkLogin(data) {
+        let html = ''
+        if(usernameInput === '' || passwordInput === '') {
+            body.innerHTML += `<div class="error">The username and password you entered did not match our records. Please double-check and try again.</div>`
+        }
+    }
     
 
 })

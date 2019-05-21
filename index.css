@@ -7,13 +7,43 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
+header {
+    width: 1366px;
+    height: 80px;
+    box-sizing: border-box;
+    display: inline-block;
+    background: #FFFFFF;
+}
+
+.username {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50px;
+    height: 20px; 
+    position: absolute;
+    top: 25px;
+    left: 1180px;
+    color: black;
+    font-weight: 600;
+    font-family: roboto;
+}
+
+.userMail {
+    position: absolute;
+    top: 45px;
+    left: 1180px;
+    width: 50px;
+    height: 20px;
+    font-size: 12px;
+}
+
 .signinWrapper {
     width: 420px;
     height: 384px;
     box-sizing: border-box;
     display: inline-block;
     position: absolute;
-    top: 150px;
+    top: 180px;
     left: 475px;
     background:  #FFFFFF;
     box-shadow: 0px 4px 47px rgba(0, 0, 0, 0.26);
@@ -29,7 +59,7 @@ h1 {
     font-family: montserrat;
     color: #000000;
     position: absolute;
-    top: 51px;
+    top: 50px;
     left: 40px;
     box-sizing: border-box;
     display: inline-block;
@@ -48,7 +78,7 @@ form {
     left: 40px;
 }
 
-.username, .password , .submit{
+.loginUsername, .password , .submit{
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
     border-radius: 3px;
@@ -65,4 +95,11 @@ form {
     color: #FFFFFF;
     padding: 0;
     text-align: center;
+}
+
+.error {
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
 }
