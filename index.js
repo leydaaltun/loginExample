@@ -1,5 +1,5 @@
-const usernameInput = document.querySelector('.username')
-//console.log(username)
+const usernameInput = document.querySelector('.loginUsername')
+//console.log(usernameInput)
 const passwordInput = document.querySelector('.password')
 //console.log(password)
 const submitButton = document.querySelector('.submit')
@@ -11,12 +11,13 @@ const form = document.querySelector('form')
 form.addEventListener('submit', function (event) {
     console.log(event)
     event.preventDefault()
-    console.log(usernameInput.value)
-    console.log(passwordInput.value)
+    //console.log(usernameInput.value)
+    //console.log(passwordInput.value)
     const data = {
         username: usernameInput.value,
         password: passwordInput.value,
     }
+    //console.log(data)
     // const jsonData = JSON.stringify(data)
     fetch(`https://login-test.wunnle.dev/api/login`, {
         method: `POST`,
@@ -33,15 +34,18 @@ form.addEventListener('submit', function (event) {
             console.log(data)
             let token = data.token
             console.log(token)
+            
+            
         })
+        .catch(function(error) {
+            console.log(error)
+            showError()
+         })
 
-    function checkLogin(data) {
-        let html = ''
-        if(usernameInput === '' || passwordInput === '') {
-            body.innerHTML += `<div class="error">The username and password you entered did not match our records. Please double-check and try again.</div>`
-        }
-    }
+     function showError() {
+         alert('sdsdf')
+     }
     
-
+    
 })
 

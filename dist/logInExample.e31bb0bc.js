@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-var usernameInput = document.querySelector('.username'); //console.log(username)
+var usernameInput = document.querySelector('.loginUsername'); //console.log(usernameInput)
 
 var passwordInput = document.querySelector('.password'); //console.log(password)
 
@@ -128,12 +128,13 @@ var form = document.querySelector('form'); //console.log(form)
 
 form.addEventListener('submit', function (event) {
   console.log(event);
-  event.preventDefault();
-  console.log(usernameInput.value);
-  console.log(passwordInput.value);
+  event.preventDefault(); //console.log(usernameInput.value)
+  //console.log(passwordInput.value)
+
   var data = {
     username: usernameInput.value,
-    password: passwordInput.value // const jsonData = JSON.stringify(data)
+    password: passwordInput.value //console.log(data)
+    // const jsonData = JSON.stringify(data)
 
   };
   fetch("https://login-test.wunnle.dev/api/login", {
@@ -148,14 +149,13 @@ form.addEventListener('submit', function (event) {
     console.log(data);
     var token = data.token;
     console.log(token);
+  }).catch(function (error) {
+    console.log(error);
+    showError();
   });
 
-  function checkLogin(data) {
-    var html = '';
-
-    if (usernameInput === '' || passwordInput === '') {
-      body.innerHTML += "<div class=\"error\">The username and password you entered did not match our records. Please double-check and try again.</div>";
-    }
+  function showError() {
+    alert('sdsdf');
   }
 });
 },{}],"../../Users/leyda/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
