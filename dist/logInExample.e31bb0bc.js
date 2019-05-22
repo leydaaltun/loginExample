@@ -155,7 +155,9 @@ form.addEventListener('submit', function (event) {
   });
 
   function showError() {
-    alert('sdsdf');
+    var header = document.querySelector('header');
+    var html = '';
+    header.innerHTML += "<div class=\"error\" >Login failed: Invalid username or password.</div";
   }
 });
 },{}],"../../Users/leyda/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

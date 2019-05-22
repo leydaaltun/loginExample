@@ -43,7 +43,10 @@ form.addEventListener('submit', function (event) {
          })
 
      function showError() {
-         alert('sdsdf')
+         const header = document.querySelector('header')
+         let html = ''
+         header.innerHTML += `<div class="error" >Login failed: Invalid username or password.</div`
+
      }
     
     
