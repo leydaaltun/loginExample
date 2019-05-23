@@ -50,6 +50,10 @@ header {
     border-radius: 10px;
 }
 
+.signinWrapper.invisible {
+    display: none;
+}
+
 h1 {
     width: 220px;
     height: 35px;
@@ -100,7 +104,7 @@ form {
 .error {
     width: 350px;
     height: 50px;
-    display: inline-block;
+    display: none;
     box-sizing: border-box;
     position: absolute;
     left: 500px;
@@ -110,6 +114,13 @@ form {
     border: 1px solid silver;
     padding: 13px 0 0 25px; 
     border-radius: 5px;
+    
+}
+
+.error.visible { /*eğer bir elementte hem error hem de visible classı varsa demek */
+
+display: inline-block;
+
 }
 
 /*# sourceMappingURL=/logInExample.9ad09f98.css.map */

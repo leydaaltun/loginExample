@@ -124,10 +124,16 @@ var passwordInput = document.querySelector('.password'); //console.log(password)
 
 var submitButton = document.querySelector('.submit'); //console.log(submitButton)
 
+var loginToken = localStorage.getItem("loginToken");
+
+if (loginToken) {
+  checkLogin(loginToken);
+}
+
 var form = document.querySelector('form'); //console.log(form)
 
 form.addEventListener('submit', function (event) {
-  console.log(event);
+  //console.log(event)
   event.preventDefault(); //console.log(usernameInput.value)
   //console.log(passwordInput.value)
 
@@ -146,20 +152,53 @@ form.addEventListener('submit', function (event) {
   }).then(function (res) {
     return res.json();
   }).then(function (data) {
-    console.log(data);
-    var token = data.token;
-    console.log(token);
+    checkLogin(data.token);
   }).catch(function (error) {
     console.log(error);
     showError();
   });
-
-  function showError() {
-    var header = document.querySelector('header');
-    var html = '';
-    header.innerHTML += "<div class=\"error\" >Login failed: Invalid username or password.</div";
-  }
 });
+
+function showError() {
+  var error = document.querySelector('.error');
+  error.classList.add('visible');
+}
+
+function hideError() {
+  var error = document.querySelector('.error');
+  error.classList.remove('visible');
+}
+
+function checkLogin(token) {
+  console.log(token);
+
+  if (token) {
+    console.log("you're logged in ");
+    hideError();
+    document.querySelector('.signinWrapper').classList.add('invisible');
+    localStorage.setItem("loginToken", token);
+    fetch('https://login-test.wunnle.dev/api/secret', {
+      method: 'POST',
+      headers: {
+        'Authorization': "bearer ".concat(token)
+      }
+    }).then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      console.log(data);
+      showUserInfo(data.user);
+    });
+  }
+}
+
+function showUserInfo(user) {
+  var username = document.querySelector('.username');
+  console.log(username);
+  var userMail = document.querySelector('.userMail');
+  console.log(userMail);
+  username.innerHTML = user.username;
+  userMail.innerHTML = user.email;
+}
 },{}],"../../Users/leyda/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
