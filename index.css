@@ -2,52 +2,42 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(120.39deg, #a9abfb 11.61%, #BA84A2 114.96%), #7E1AFC no-repeat;
-    width: 1364px;
-    height: 657px;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    /*width: 1364px;
+    height: 657px;*/
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 header {
-    width: 1366px;
+    width: auto;
     height: 80px;
-    box-sizing: border-box;
-    display: inline-block;
     background: #FFFFFF;
+    margin-bottom: 50px;
 }
 
 .username {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 50px;
-    height: 20px; 
-    position: absolute;
-    top: 25px;
-    left: 1180px;
+    width: 100px;
+    height: 20px;
     color: black;
     font-weight: 600;
     font-family: roboto;
 }
 
 .userMail {
-    position: absolute;
-    top: 45px;
-    left: 1180px;
     width: 50px;
     height: 20px;
     font-size: 12px;
 }
 
 .signinWrapper {
-    width: 420px;
+    width: auto;
     height: 384px;
     box-sizing: border-box;
-    display: inline-block;
-    position: absolute;
     top: 180px;
     left: 475px;
-    background:  #FFFFFF;
+    background: #FFFFFF;
     box-shadow: 0px 4px 47px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
+    text-align: center;
 }
 
 .signinWrapper.invisible {
@@ -55,42 +45,38 @@ header {
 }
 
 h1 {
-    width: 220px;
     height: 35px;
     font-style: normal;
     font-weight: 600;
     font-size: 27.8578px;
     font-family: montserrat;
     color: #000000;
-    position: absolute;
-    top: 50px;
-    left: 40px;
     box-sizing: border-box;
     display: inline-block;
 }
+
 span {
-    position: absolute;
-    top: 108px;
-    left: 43px;
     box-sizing: border-box;
-    color:  #8B8787;
+    color: #8B8787;
     font-family: roboto;
-}
-form {
-    position: absolute;
-    top: 150px;
-    left: 40px;
+    display: block;
 }
 
-.loginUsername, .password , .submit{
+form {
+    position: inherit;
+}
+
+.loginUsername,
+.password,
+.submit {
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
     border-radius: 3px;
     border: 1px solid #BCBFC6;
-    width: 340px;
+    width: 80%;
     height: 45px;
     margin-bottom: 15px;
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
 .submit {
@@ -106,19 +92,14 @@ form {
     height: 50px;
     display: none;
     box-sizing: border-box;
-    position: absolute;
-    left: 500px;
-    top: 14px;
     font-family: roboto;
     font-weight: 500;
     border: 1px solid silver;
-    padding: 13px 0 0 25px; 
+    padding: 13px 0 0 25px;
     border-radius: 5px;
-    
 }
 
-.error.visible { /*eğer bir elementte hem error hem de visible classı varsa demek */
-
-display: inline-block;
-
+.error.visible {
+    /*eğer bir elementte hem error hem de visible classı varsa demek */
+    display: inline-block;
 }
