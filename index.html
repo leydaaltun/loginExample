@@ -13,21 +13,25 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <span class="username"></span>
-            <span class="userMail"></span>
-            <div class="error">Login failed: Invalid username or password.
+    <div class="container" style="width: fit-content;">
+        <div class="col">
+            <header>
+                <span class="username"></span>
+                <span class="userMail"></span>
+                <div class="error">Login failed: Invalid username or password.
+                </div>
+            </header>
+        </div>
+        <div class="col">
+            <div class="signinWrapper">
+                <h1>Welcome back!</h1>
+                <span>Please login to continue</span>
+                <form>
+                    <input class="loginUsername" type="text" placeholder="Username">
+                    <input class="password" type="password" placeholder="Password" required>
+                    <button class="submit">Get discount email</button>
+                </form>
             </div>
-        </header>
-        <div class="signinWrapper">
-            <h1>Welcome back!</h1>
-            <span>Please login to continue</span>
-            <form>
-                <input class="loginUsername" type="text" placeholder="Username">
-                <input class="password" type="password" placeholder="Password" required>
-                <button class="submit">Get discount email</button>
-            </form>
         </div>
     </div>
 
